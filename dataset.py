@@ -8,7 +8,7 @@ from utils import to_categorical
 import logging
 
 from sklearn.model_selection import  train_test_split
-import glob
+from glob import glob
 
 SOURCE_IMAGE_URL = 'http://vision.stanford.edu/aditya86/ImageNetDogs/images.tar'
 SOURCE_ANNOT_URL = 'http://vision.stanford.edu/aditya86/ImageNetDogs/annotation.tar'
