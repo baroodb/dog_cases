@@ -74,10 +74,10 @@ def load_data():
                                                                                                     train_labels,
                                                                                                     train_bbox)
     test_files, test_labels, test_bbox = _load_dataset(test_list)
-    dog_names = [item[27:-1] for item in sorted(glob("dogImages/Images/*/"))]
+
 
     # print statistics about the dataset
-    logger.info('There are %d total dog categories.' % len(dog_names))
+
     logger.info('There are %s total dog images.\n' % len(np.hstack([train_files, test_files])))
     logger.info('There are %d training dog images.' % len(train_files))
     logger.info('There are %d validation dog images.' % len(valid_files))
@@ -87,4 +87,4 @@ def load_data():
     valid = DataSet(valid_files, valid_labels, valid_bbox)
     test = DataSet(test_files, test_labels, test_bbox)
 
-    return train, valid, test, dog_names
+    return train, valid, test
